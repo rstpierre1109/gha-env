@@ -1,4 +1,4 @@
-name: Deployment
+name: Deployment New Test
 on:
   push:
     branches:
@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Output information
-        run:
+        run: |
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
